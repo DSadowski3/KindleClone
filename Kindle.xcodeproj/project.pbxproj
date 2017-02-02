@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		8701D09A1E43BAA70080E4D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701D0991E43BAA70080E4D7 /* AppDelegate.swift */; };
 		8701D09C1E43BAA70080E4D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701D09B1E43BAA70080E4D7 /* ViewController.swift */; };
-		8701D09F1E43BAA70080E4D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8701D09D1E43BAA70080E4D7 /* Main.storyboard */; };
 		8701D0A11E43BAA70080E4D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8701D0A01E43BAA70080E4D7 /* Assets.xcassets */; };
 		8701D0A41E43BAA70080E4D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8701D0A21E43BAA70080E4D7 /* LaunchScreen.storyboard */; };
 		8701D0AF1E43BAA70080E4D7 /* KindleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701D0AE1E43BAA70080E4D7 /* KindleTests.swift */; };
 		8701D0BA1E43BAA70080E4D7 /* KindleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701D0B91E43BAA70080E4D7 /* KindleUITests.swift */; };
+		87D08AFA1E43D5FA00BEB69E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D08AF91E43D5FA00BEB69E /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 		8701D0961E43BAA70080E4D7 /* Kindle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kindle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8701D0991E43BAA70080E4D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8701D09B1E43BAA70080E4D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8701D09E1E43BAA70080E4D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8701D0A01E43BAA70080E4D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8701D0A31E43BAA70080E4D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8701D0A51E43BAA70080E4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		8701D0B51E43BAA70080E4D7 /* KindleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KindleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8701D0B91E43BAA70080E4D7 /* KindleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindleUITests.swift; sourceTree = "<group>"; };
 		8701D0BB1E43BAA70080E4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87D08AF91E43D5FA00BEB69E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,6 @@
 				8701D0C71E43BABA0080E4D7 /* Controller */,
 				8701D0991E43BAA70080E4D7 /* AppDelegate.swift */,
 				8701D09B1E43BAA70080E4D7 /* ViewController.swift */,
-				8701D09D1E43BAA70080E4D7 /* Main.storyboard */,
 				8701D0A01E43BAA70080E4D7 /* Assets.xcassets */,
 				8701D0A21E43BAA70080E4D7 /* LaunchScreen.storyboard */,
 				8701D0A51E43BAA70080E4D7 /* Info.plist */,
@@ -145,6 +144,7 @@
 		8701D0C91E43BAD40080E4D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				87D08AF91E43D5FA00BEB69E /* Models.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -261,7 +261,6 @@
 			files = (
 				8701D0A41E43BAA70080E4D7 /* LaunchScreen.storyboard in Resources */,
 				8701D0A11E43BAA70080E4D7 /* Assets.xcassets in Resources */,
-				8701D09F1E43BAA70080E4D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D08AFA1E43D5FA00BEB69E /* Models.swift in Sources */,
 				8701D09C1E43BAA70080E4D7 /* ViewController.swift in Sources */,
 				8701D09A1E43BAA70080E4D7 /* AppDelegate.swift in Sources */,
 			);
@@ -323,14 +323,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8701D09D1E43BAA70080E4D7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8701D09E1E43BAA70080E4D7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8701D0A21E43BAA70080E4D7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -538,6 +530,7 @@
 				8701D0C01E43BAA70080E4D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8701D0C11E43BAA70080E4D7 /* Build configuration list for PBXNativeTarget "KindleTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +539,7 @@
 				8701D0C31E43BAA70080E4D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8701D0C41E43BAA70080E4D7 /* Build configuration list for PBXNativeTarget "KindleUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +548,7 @@
 				8701D0C61E43BAA70080E4D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
