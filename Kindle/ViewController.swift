@@ -8,18 +8,73 @@
 
 import UIKit
 
+class Book {
+    
+    let title: String
+    let author: String
+    let pages: [Page]
+    
+    init(title: String, author: String, pages: [Page]) {
+        self.title = title
+        self.author = author
+        self.pages = pages
+    }
+}
+
+class Page {
+    
+    let number: Int
+    let text: String
+    
+    init(number: Int, text: String) {
+        self.number = number
+        self.text = text
+    }
+}
+
 class ViewController: UIViewController {
+    
+    var books: [Book]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.backgroundColor = .red
+        
+        setupBooks()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupBooks() {
+        let page1 = Page(number: 1, text: "When i was little")
+        let page2 = Page(number: 2, text: "this is page 2")
+        
+        let pages = [page1, page2]
+        
+        let book = Book(title: "Steve Jobs", author: "Walter Isaacson", pages: pages)
+        print("Title: \(book.author), Author: \(book.title)")
+        
+        let book2 = Book(title: "Bill Gates a bio", author: "Michael Becraft", pages: [
+            Page(number: 1, text: "page 1 i am bill"),
+            Page(number: 2, text: "page 2 i am still bill"),
+            Page(number: 3, text: "page 3 nope still bill"),
+            Page(number: 4, text: "page 4 now im gwen")
+            ])
+        
+        self.books = [book, book2]
+        
+        guard let books = self.books else {
+            return
+        }
+        
+        for book in books {
+            print(book.title)
+            for page in book.pages {
+                print(page.text)
+            }
+        }
+        
     }
-
 
 }
 

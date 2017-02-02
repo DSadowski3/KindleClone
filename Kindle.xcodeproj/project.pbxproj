@@ -97,6 +97,9 @@
 		8701D0981E43BAA70080E4D7 /* Kindle */ = {
 			isa = PBXGroup;
 			children = (
+				8701D0C91E43BAD40080E4D7 /* Model */,
+				8701D0C81E43BAC30080E4D7 /* View */,
+				8701D0C71E43BABA0080E4D7 /* Controller */,
 				8701D0991E43BAA70080E4D7 /* AppDelegate.swift */,
 				8701D09B1E43BAA70080E4D7 /* ViewController.swift */,
 				8701D09D1E43BAA70080E4D7 /* Main.storyboard */,
@@ -123,6 +126,27 @@
 				8701D0BB1E43BAA70080E4D7 /* Info.plist */,
 			);
 			path = KindleUITests;
+			sourceTree = "<group>";
+		};
+		8701D0C71E43BABA0080E4D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8701D0C81E43BAC30080E4D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8701D0C91E43BAD40080E4D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
