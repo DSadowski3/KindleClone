@@ -21,7 +21,6 @@ class ViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         navigationItem.title = "Kindle"
         
-        setupBooks()
         fetchBooks()
         
     }
@@ -35,13 +34,29 @@ class ViewController: UITableViewController {
                     print("Failed to fetch extrenal json Books", err)
                 }
                 
-                //print(response)
-                //print(data)
-                
                 guard let data = data else {return}
-                guard let dataAsString = String(data: data, encoding: .utf8)
-                    else {return}
-                print(dataAsString)
+                
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+
+                    guard let bookDictionaries = json as? [[String: Any]] else {return}
+                    
+                    self.books = []
+                    for bookDictionary in bookDictionaries {
+                        if let title = bookDictionary["title"] as? String, let author = bookDictionary["author"] as? String {
+                            let book = Book(title: title, author: author, image: #imageLiteral(resourceName: "steveJobs"), pages: [])
+                            self.books?.append(book)
+                        
+                        }
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    
+                }catch let jsonError {
+                    
+                }
                 
         }).resume()
             
