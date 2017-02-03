@@ -22,7 +22,32 @@ class ViewController: UITableViewController {
         navigationItem.title = "Kindle"
         
         setupBooks()
+        fetchBooks()
         
+    }
+    
+    func fetchBooks() {
+        print("fethinvh goobn ....")
+        if let url = URL(string: "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/kindle.json") {
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                
+                if let err = error {
+                    print("Failed to fetch extrenal json Books", err)
+                }
+                
+                //print(response)
+                //print(data)
+                
+                guard let data = data else {return}
+                guard let dataAsString = String(data: data, encoding: .utf8)
+                    else {return}
+                print(dataAsString)
+                
+        }).resume()
+            
+            print("Have w fetched our books yet?")
+        }
+
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
