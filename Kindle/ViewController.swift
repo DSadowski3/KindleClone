@@ -27,7 +27,7 @@ class ViewController: UITableViewController {
     }
     
     func fetchBooks() {
-        print("fethinvh goobn ....")
+        print("fetching books ....")
         if let url = URL(string: "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/kindle.json") {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 
